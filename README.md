@@ -21,10 +21,13 @@ The libSGM performance obtained from benchmark sample
 - subpixel : enabled
 
 ### Results
-|Device|Processing Time[Milliseconds]|FPS|
-|---|---|---|
-|Tegra X2 (CUDA: v10.0)|28.5|35.1|
-|GTX 1080 Ti (CUDA: v10.1)|2.0|495.1|
+|Device|CUDA version|Processing Time[Milliseconds]|FPS|
+|---|---|---|---|
+|GTX 1080 Ti|10.1|2.0|495.1|
+|GeForce RTX 3080|11.1|1.5|651.3|
+|Tegra X2|10.0|28.5|35.1|
+|Xavier(MODE_15W)|10.2|17.3|57.7|
+|Xavier(MAXN)|10.2|9.0|110.7|
 
 ## Requirements
 libSGM needs CUDA (compute capabilities >= 3.5) to be installed.  
@@ -102,9 +105,10 @@ $ ./sgm-test
 
 Test code compares our implementation of each functions to naive implementation.
 
-## Authors
-The "SGM Team": Samuel Audet, Yoriyuki Kitta, Yuta Noto, Ryo Sakamoto, Akihiro Takagi  
-[Fixstars Corporation](http://www.fixstars.com/)
+## Author
+The "adaskit Team"  
+
+The adaskit is an open-source project created by [Fixstars Corporation](https://www.fixstars.com/) and its subsidiary companies including [Fixstars Autonomous Technologies](https://at.fixstars.com/), aimed at contributing to the ADAS industry by developing high-performance implementations for algorithms with high computational cost.
 
 ## License
 Apache License 2.0
